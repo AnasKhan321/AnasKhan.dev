@@ -245,7 +245,7 @@ const skills  : Skill[] = [
           <div className="w-[320px] profileimage  ">
           
             <img
-              src="https://anaskhan321.github.io/PortfolioSam/img/albert-dera-ILip77SbmOE-unsplash-min.jpg"
+              src="https://s3.ap-south-1.amazonaws.com/hls.anaskhan/profileimage.jpg"
               alt="Anas Khan"
               className=" p-image   transition-all  cursor-pointer rounded-full w-80 h-80 object-cover mx-auto "
             />
