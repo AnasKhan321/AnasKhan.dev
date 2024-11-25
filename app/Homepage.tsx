@@ -9,6 +9,8 @@ import {Libre_Baskerville}  from "next/font/google"
 
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import { ReactTyped } from "react-typed";
+import {motion}  from "framer-motion"  ; 
 
 interface Project {
   title : string , 
@@ -221,7 +223,7 @@ const skills  : Skill[] = [
       <main className="container mx-auto px-4 py-16">
         <section id="about" className="mb-20 flex flex-col md:flex-row items-center gap-12 justify-between">
           <div className="md:w-1/2">
-            <h2 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Hello, I&apos;m Anas Khan</h2>
+            <h2 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Hello, I&apos;m <ReactTyped strings={["Anas Khan"]}   typeSpeed={30} style={{color : "transparent"  , fontWeight : "bold"}} /></h2>
             <p className="text-xl mb-6 text-[#e5e5e5]">
             I&apos;m Anas Khan, a passionate web developer and web scraper from Jodhpur, Rajasthan. I specialize in building dynamic web applications and extracting valuable data from online sources, constantly honing my skills to create efficient, impactful solutions.
             </p>
@@ -255,8 +257,14 @@ const skills  : Skill[] = [
         <section id="projects" className="mb-20">
           <h2 className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Projects.map((project) => (
-              <Card key={project.id} className="bg-[#14213d] border-[#fca311] overflow-hidden group  mt-10  cursor-pointer">
+            {Projects.map((project  , index) => (
+
+              <motion.div
+              initial={{ opacity: 0.5, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5  , delay :0.4 * index }}
+              key={project.id}> 
+              <Card  className="bg-[#14213d] border-[#fca311] overflow-hidden group  mt-10  cursor-pointer">
               <CardHeader className="p-0">
                 <img
                   src={project.imageurl}
@@ -277,6 +285,7 @@ const skills  : Skill[] = [
                 <Button className="w-full bg-[#fca311] text-[#000000] font-bold hover:bg-[#e5e5e5] transition-colors">View Project</Button> </Link>
               </CardFooter>
             </Card>
+            </motion.div>
           ))}
         
           </div>
@@ -286,10 +295,15 @@ const skills  : Skill[] = [
           <h2 className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Skills & Expertise</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {skills.map((skill , index ) => (
-              <Card key={index} className="bg-[#14213d] border-[#fca311] text-center p-6 hover:bg-[#fca311] hover:text-[#000000] transition-colors group  cursor-pointer  ">
+
+              <motion.div  key={index}                 
+              initial={{ opacity: 0, y : 100 }}
+              whileInView={{ opacity: 1, y : 0 }}
+              transition={{ duration: 0.5  , delay :0.6  }}  >  
+              <Card  className="bg-[#14213d] border-[#fca311] text-center p-6 hover:bg-[#fca311] hover:text-[#000000] transition-colors group  cursor-pointer  ">
                 <CardTitle className="text-xl mb-2 text-[#fca311] group-hover:text-[#000000]">{skill.name}</CardTitle>
                 <CardDescription className="text-[#e5e5e5] group-hover:text-[#14213d] tracking-wider">{skill.level}</CardDescription>
-              </Card>
+              </Card></motion.div>
             ))}
           </div>
         </section>
