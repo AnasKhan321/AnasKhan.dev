@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Menu , X   , Twitter } from 'lucide-react'
+import { Github, Linkedin, Menu , X   , Twitter  , Phone , Mail , MapPin  , } from 'lucide-react'
 import {Libre_Baskerville}  from "next/font/google"
 
 import { Badge } from "@/components/ui/badge"
@@ -190,7 +190,7 @@ const skills  : Skill[] = [
 
   return (
     <div className={`  min-h-screen bg-gradient-to-br from-[#000000] via-[#14213d] to-[#fca311] text-[#e5e5e5]`}>
-      <header className={`sticky top-0 z-10 ${isScrolled? "bg-[#000000]/50"  : "bg-black"} transition-all     backdrop-blur-md`}>
+      <header className={`sticky top-0 z-10 ${isScrolled? "bg-[#000000]/50"  : "bg-black"} transition-all delay-300     backdrop-blur-md`}>
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Anas Khan</h1>
           <nav className="hidden md:flex space-x-4">
@@ -254,6 +254,50 @@ const skills  : Skill[] = [
           </div>
         </section>
 
+        
+        <motion.div 
+                      initial={{ opacity: 0, y : 200  }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5  , delay :0.2  }}   id="personal-details" className="mb-20">
+          <h2 className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Personal Details</h2>
+          <Card className="bg-[#14213d] border-[#fca311]">
+            <CardContent className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-center space-x-4"> 
+                  <Phone className="h-6 w-6 text-[#fca311]  hover:text-green-500 cursor-pointer  transition-all" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#fca311]">Phone</h3>
+                    <p className="text-[#e5e5e5]">+91 9588074262</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Mail className="h-6 w-6 text-[#fca311]  hover:text-red-500 cursor-pointer transition-all" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#fca311]">Email</h3>
+                    <p className="text-[#e5e5e5]">anaskhan.dev786@gmail.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4 md:col-span-1">
+                  <MapPin className="h-6 w-6 text-[#fca311] hover:text-blue-500 cursor-pointer transition-all" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#fca311]">Address</h3>
+                    <p className="text-[#e5e5e5]">Jodhpur, Rajasthan, India</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 md:col-span-1">
+                  <Github className="h-6 w-6 text-[#fca311] cursor-pointer hover:text-black transition-all " />
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#fca311]">Github</h3>
+                    <p className="text-[#e5e5e5]">@AnasKhan321</p>
+                  </div>
+                </div>
+
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
         <section id="projects" className="mb-20">
           <h2 className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -262,7 +306,7 @@ const skills  : Skill[] = [
               <motion.div
               initial={{ opacity: 0.5, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5  , delay :0.4 * index }}
+              transition={{ duration: 0.5  , delay :0.1 * (index/4) }}
               key={project.id}> 
               <Card  className="bg-[#14213d] border-[#fca311] overflow-hidden group  mt-10  cursor-pointer">
               <CardHeader className="p-0">
@@ -299,7 +343,7 @@ const skills  : Skill[] = [
               <motion.div  key={index}                 
               initial={{ opacity: 0, y : 100 }}
               whileInView={{ opacity: 1, y : 0 }}
-              transition={{ duration: 0.5  , delay :0.6  }}  >  
+              transition={{ duration: 0.5  , delay :0.6 * index  }}  >  
               <Card  className="bg-[#14213d] border-[#fca311] text-center p-6 hover:bg-[#fca311] hover:text-[#000000] transition-colors group  cursor-pointer  ">
                 <CardTitle className="text-xl mb-2 text-[#fca311] group-hover:text-[#000000]">{skill.name}</CardTitle>
                 <CardDescription className="text-[#e5e5e5] group-hover:text-[#14213d] tracking-wider">{skill.level}</CardDescription>
