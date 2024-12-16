@@ -6,8 +6,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, Menu , X   , Twitter  , Phone , Mail , MapPin  , } from 'lucide-react'
 import {Libre_Baskerville}  from "next/font/google"
-
-import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ReactTyped } from "react-typed";
 import {motion}  from "framer-motion"  ; 
