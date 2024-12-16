@@ -110,6 +110,14 @@ const Projects : Project[] = [
     url : "https://tomato-leaf-detection-frontend-9y2k.vercel.app/"
 
   },
+  {
+    title : "WebChatApp"  , 
+    description : "A cutting-edge web chat application built with Next.js, enabling seamless real-time communication through Socket.IO. Messages are securely stored using Prisma for reliable data management, while the app also supports file sharing to enhance collaboration and connectivity."  , 
+    imageurl : "https://anasawsbucket.s3.ap-south-1.amazonaws.com/alphachat.png"  , 
+    id : "6"  , 
+    type : "Full Stack development"  , 
+    url : "https://alpha-f.vercel.app/"
+  }
 
 
 ]
@@ -300,13 +308,13 @@ const skills  : Skill[] = [
 
         <section id="projects" className="mb-20">
           <h2 className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#fca311] to-[#e5e5e5]">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {Projects.map((project  , index) => (
 
               <motion.div
-              initial={{ opacity: 0.5, x: -30 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5  , delay :0.1 * (index/4) }}
+              transition={{ duration: 0.5  , delay :0.1 * index }}
               key={project.id}> 
               <Card  className="bg-[#14213d] border-[#fca311] overflow-hidden group  mt-10  cursor-pointer">
               <CardHeader className="p-0">
@@ -319,7 +327,7 @@ const skills  : Skill[] = [
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <CardTitle className={`text-2xl font-bold text-[#fca311] ${libreBask.className}`}>{project.title}</CardTitle>
-                  <Badge variant="secondary" className="bg-[#fca311] text-[#000000]">{project.type}</Badge>
+                  {/* <Badge variant="secondary" className="bg-[#fca311] text-[#000000]">{project.type}</Badge> */}
                 </div>
                 <CardDescription className="text-[#e5e5e5] tracking-wider">{project.description.substring(0, 200 )}</CardDescription>
               </CardContent>
@@ -343,7 +351,7 @@ const skills  : Skill[] = [
               <motion.div  key={index}                 
               initial={{ opacity: 0, y : 100 }}
               whileInView={{ opacity: 1, y : 0 }}
-              transition={{ duration: 0.5  , delay :0.6 * index  }}  >  
+              transition={{ duration: 0.5  , delay :0.1 * index  }}  >  
               <Card  className="bg-[#14213d] border-[#fca311] text-center p-6 hover:bg-[#fca311] hover:text-[#000000] transition-colors group  cursor-pointer  ">
                 <CardTitle className="text-xl mb-2 text-[#fca311] group-hover:text-[#000000]">{skill.name}</CardTitle>
                 <CardDescription className="text-[#e5e5e5] group-hover:text-[#14213d] tracking-wider">{skill.level}</CardDescription>
