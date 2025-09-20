@@ -79,7 +79,7 @@ const Projects: Project[] = [
     id: "-1",
     type: "Blockchain",
     url: "https://decentraliset.vercel.app/",
-    githuburl: "https://github.com/AnasKhan321/decentralise-twitter",
+    githuburl: "https://github.com/AnasKhan321/Solana-decentralise-twitter",
     technologies: ["Solana", "Rust", "React", "Web3"]
   },
   {
@@ -99,7 +99,7 @@ const Projects: Project[] = [
     id: "-12",
     type: "AI Platform",
     url: "https://mindmontiorf.vercel.app/",
-    githuburl: "https://github.com/AnasKhan321/Multi-Agent-Orchestration",
+    githuburl: "https://github.com/AnasKhan321/MindMotorF",
     technologies: ["AI", "React", "Node.js", "Python"]
   },
   {
@@ -119,7 +119,7 @@ const Projects: Project[] = [
     id: "2",
     type: "Web Scraping",
     url: "https://lucky-lift-client.vercel.app/",
-    githuburl: "https://github.com/AnasKhan321/LuckyLift",
+    githuburl: "https://github.com/AnasKhan321/LuckyLiftClient",
     technologies: ["Next.js", "Node.js", "PostgreSQL", "Tailwind"]
   },
   {
@@ -129,7 +129,7 @@ const Projects: Project[] = [
     id: "3",
     type: "Full Stack",
     url: "https://cwb-client.vercel.app/",
-    githuburl: "https://github.com/AnasKhan321/CodeWithBat",
+    githuburl: "https://github.com/AnasKhan321/CWBClient",
     technologies: ["Next.js", "PostgreSQL", "Node.js", "Tailwind"]
   },
   {
@@ -139,7 +139,7 @@ const Projects: Project[] = [
     id: "4",
     type: "Full Stack",
     url: "https://twitter-clone-client-alpha.vercel.app/",
-    githuburl: "https://github.com/AnasKhan321/TwitterClone",
+    githuburl: "https://github.com/AnasKhan321/Twitter-Clone-server",
     technologies: ["Next.js", "Prisma", "PostgreSQL", "GraphQL"]
   },
   {
@@ -149,7 +149,7 @@ const Projects: Project[] = [
     id: "5",
     type: "Machine Learning",
     url: "https://tomato-leaf-detection-frontend-9y2k.vercel.app/",
-    githuburl: "https://github.com/AnasKhan321/Tomato-Leaf-Detection",
+    githuburl: "https://github.com/AnasKhan321/TomatoLeafDetectionFrontend",
     technologies: ["TensorFlow", "FastAPI", "React", "Python"]
   },
   {
@@ -159,7 +159,7 @@ const Projects: Project[] = [
     id: "6",
     type: "Full Stack",
     url: "https://alpha-f.vercel.app/",
-    githuburl: "https://github.com/AnasKhan321/WebChatApp",
+    githuburl: "https://github.com/AnasKhan321/AlphaBackend",
     technologies: ["Next.js", "Socket.IO", "Prisma", "Node.js"]
   }
 ]
@@ -391,7 +391,7 @@ const skills: Skill[] = [
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <p className="text-lg text-cyan-400 font-medium mb-4">Hello there, I'm</p>
+              <p className="text-lg text-cyan-400 font-medium mb-4">Hello there, I&apos;m</p>
               <h1 className="text-6xl md:text-7xl font-bold font-poppins mb-6">
                 <span className="bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent">
                   Anas Khan
@@ -500,14 +500,14 @@ const skills: Skill[] = [
                   </span>
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I'm a passionate web developer and blockchain enthusiast from Jodhpur, Rajasthan. 
+                  I&apos;m a passionate web developer and blockchain enthusiast from Jodhpur, Rajasthan. 
                   I specialize in building dynamic web applications, extracting valuable data through 
                   web scraping, and developing innovative blockchain solutions.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   With expertise in modern technologies like React, Next.js, Node.js, and Solana, 
                   I constantly strive to create efficient, impactful solutions that push the boundaries 
-                  of what's possible on the web.
+                  of what&apos;s possible on the web.
                 </p>
                 <div className="pt-4">
                   <Button 
@@ -807,11 +807,11 @@ const skills: Skill[] = [
             >
               <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  Let's Work Together
+                  Let&apos;s Work Together
                 </span>
               </h2>
               <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                I'm currently available for freelance work and open to discussing new opportunities. 
+                I&apos;m currently available for freelance work and open to discussing new opportunities. 
                 If you have a project in mind, feel free to reach out!
               </p>
             </motion.div>
@@ -838,7 +838,7 @@ const skills: Skill[] = [
                   </div>
                   <CardTitle className="text-3xl font-bold text-white font-poppins mb-2">Get In Touch</CardTitle>
                   <CardDescription className="text-slate-300 text-lg max-w-md mx-auto leading-relaxed">
-                    Have a project in mind? Let's collaborate and bring your vision to life!
+                    Have a project in mind? Let&apos;s collaborate and bring your vision to life!
                   </CardDescription>
             </CardHeader>
                 
